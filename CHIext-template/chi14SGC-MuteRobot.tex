@@ -128,13 +128,106 @@ I'm BaoZi! I'm awesome!!!
 % =============================================================================
 \section{Design and Development}
 % =============================================================================
-line
+Mute Robot is a cooperative puzzle platformer game using Unity3D engine\cite{Unity3D}. In our game, two players are in different rooms and connected by network. In each room, we provide a wii controller and a Kinect\cite{Kinect} device. wii\cite{Wii} controller is used to control the avator movement,like jump or move. in the mean time, Kinect is capturing player’s body language and apply the posture to the avator. With this setting, players cant talk to their teammate directly and the only way to communicate is using  their body language.
+
+
+%why use wii, why not use pure Kinect control!?
+
+
+
+\section{Using Body Language}
+% =============================================================================
+%關卡設計方式
+In order to apply a new communication interface for user, Mute Robot is designed by using body language to communicate between players. Testing shows that using body language is an intuitive choice for player to communicate without speech ability.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figures/Figure1.jpg}
+  \caption{asymmetric puzzle system example}
+  \label{fig:Figure1}
+\end{figure}
+
+To encourage players using body language, we design an asymmetric puzzle system, providing one player to receiving puzzle hints, and another player solving the puzzle. Take one of our game stage for example(fig. 1), there is a locked door on the right side which obstruct both players route to the next stage. With a view to opening the locked door, the underside player will receive some puzzle-solving message. The upper side player can't see the puzzle-solving hints but he can turn the wheel to the match puzzle answer. The only way to pass the stage needs two players' cooperation and communication with body language. As a result, the right side locked door will be opened when all wheels be turned to the right direction.
+
+%If human beings lose speech ability, with no doubt, an intuition way for people communication is using body language. Based on past historical experience, using body language is a human instinct. In addition,  We assume that 
+
+% =============================================================================
+\section{Testing and Evaluation}
+% =============================================================================
+We recruited 16 participants without knowing each other, and randomly divided them into 8 groups, preparing camera and screen-captured software to attain playing information. 
+On average, the total game duration is about 10 to 20 minutes. 
+At the end of the game, we provided a questionnaire to invest the player experience and feedback.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/Figure2.jpg}
+  \caption{emulate with body language}
+  \label{fig:Figure2}
+\end{figure}
+
+Among player's playing experience, we find out some unique condition between players' body language communication: 
+(1) Command style: player who receives puzzle-solving hint messages will command another player to do some action directly. For instance, player would wave his hand to tell another player to go back; or player likes to jump in place in order to imply another player to tread on the relaive position.
+(2) Do by your own: player who receives puzzle-solving hint messages will do the puzzle-solving actions one time for another player to observe and emulate. For example, one of our game stage need to open the locked door by jumping on three buttoms respectively with different order(fig. 2).
+(3) Pictogram style: player would use his own body to express what he see from puzzle-solving hint messages. For instance(fig. 3), one participant want to express letter ``N'', and her solution is using pictogram with body language to show the answer for another player.
+
+\marginpar{
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/Figure3.jpg}
+  \caption{player perform pictogram with body language}
+  \label{fig:Figure3}
+\end{figure}
+}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/1_BLisInteresting.png}
+  \caption{using body language is interesting}
+  \label{fig:1_BLisInteresting}
+\end{figure}
+
+After we analyze statistics from the questionnare. we find some truth which can support our Mute Robot game design. 
+Figure 4 shows out that all participants think using body language to communicate in puzzle game is interesting.
+%有趣，了解對方的語言、有好感
+Figure 5 shows that two-thirds players feel they can figure out another player's body language.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\linewidth]{figures/2_BLunderstand.png}
+  \caption{you can figure out your teammate's body language}
+  \label{fig:2_BLunderstand}
+\end{figure}
+
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=0.8\linewidth]{figures/3_BLPositiveFeeling.png}
+%  \caption{333}
+%  \label{fig:3_BLPositiveFeeling}
+%\end{figure}
+
+%situations
+%1. 命令句：如果畫面鐘有那個東西，會直接用指的, 回來手勢,
+%2. 做給他看(踩左右中)
+%3. 象行(angry中的N), 模仿動物 directly
+
+%找16位玩家，不認識對方
+%遊戲長度約10~20分鐘
+%- # 
+%- Body Language Communication (observation)
+%- Satisaction Survey
+
+
 
 % =============================================================================
 \section{Future Work}
 % =============================================================================
-line
+hihi future work
 
+%1. 可以抓到表情、手指
+%2. 可以做更複雜的關卡
+%now:一個人告訴另一個人，不是兩邊整合訊息 (a告訴b
+%improve:上下皆有一些資料，共同完成 a purpose
 
 % =============================================================================
 \section{Conslusion}
@@ -161,6 +254,6 @@ References must be the same font size as other body text.
 
 \balance
 \bibliographystyle{acm-sigchi}
-\bibliography{sample}
+\bibliography{chi14SGC-MuteRobot}
 
 \end{document}
