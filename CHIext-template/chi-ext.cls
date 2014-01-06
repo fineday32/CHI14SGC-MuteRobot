@@ -272,11 +272,6 @@
 %$\bullet$ License: The author(s) retain copyright, but ACM receives an exclusive publication license.\\
 %$\bullet$ Open Access: The author(s) wish to pay for the work to be open access. The additional fee must be paid to ACM.\\
 %This text field is large enough to hold the appropriate release statement assuming it is single spaced.
-Copyright is held by the author/owner(s).\\
- {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. 
-% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. 
-% DOI string from ACM form confirmation}
-%% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (
 }
 
 \endinput
