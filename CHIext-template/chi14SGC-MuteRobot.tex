@@ -89,10 +89,13 @@
 \maketitle
 
 \begin{abstract}
-Speech ability, a general habit becoming nature for us, plays an important role in our daily life. Besides speech, using body language is an evident and feasible way to communicate between two people.
-Mute Robot Game has been designed to provide players with a series of puzzle challenges where they both become robots without speech ability.
-We encourage players to communicate with body language, with an emphasis on cooperation to facilitate immersion with each other.
-In our user study, all participants thought it was interesting to communicate with body language and two-thirds of the players reported they could understand the other player's body language.
+%Speech ability, a general habit becoming nature for us, plays an important role in our daily life. Besides speech, using body language is an evident and feasible way to communicate between two people.
+Body language is an expressive form of communication that transcends language barriers, and can range from subtle to outrageous. 
+We have designed Mute Robot, a game in which 2 players must cooperate to solve a series of puzzle challenges by communicating through body language only.
+Kinect devices are used to capture players' posture and movement, which are then shared between two partners who are playing at two different physical locations. Mute Robot is designed to connect people across the globe who otherwise would not be able to communicate via a common language.
+%We encourage players to communicate with body language, with an emphasis on cooperation to facilitate immersion with each other.
+%In our 16-person user study, all participants thought it was interesting to communicate with body language 
+Our 16-person user study showed that body language is practical and entertaining, with 2/3 of the players reported that they could understand the other player's body language well.
 %Players need to cooperate with each other to pass challenges by using body language communication.
 \end{abstract}
 
@@ -125,22 +128,21 @@ In our user study, all participants thought it was interesting to communicate wi
 
 %Before any development of languages, it was feasible that people use body language to build a connection between each other.
 %Furthermore, it is a common solution for human using body langauge to communicate with people from different regions.
-Body language is effective to build connections between people without speech, it is a common solution for human using body langauge to communicate with people from different regions.
+Body language is the fundamental form of communication. It is how we communicate with babies who have not developed language skills, and how we communicate with people whom we do not share a common language with.
+%builds connection between people without speech, and is common for people to communicate with people from different regions.
 %With the appearance of motion capture devices, the diversity of gameplay increases dramatically.
-With the appearance of motion capture devices, players now are allowed to play games with body motions and body gestures.
-Nonetheless, most games with these innovative devices only apply independent users' motion variations to avatars in games. 
-Seldom of these games discuss the body language between players.
-In our work, we try to construct a creative gameplay to immerse body languages from the reality to a virtual world by supplying an unique application of Kinect\cite{Kinect}.
-In other words, it is a cross-language game for human beings around the world.
+With the recent advancement in motion capture devices, such as the Microsoft Kinect\cite{Kinect}, players are now able to play games with body motion and gestures.
+However, most games have focused on using body motion as a more natural input to replace controllers.
+Also, multiplayer games have focused on party settings with co-located players, rather than connecting people across the globe.
+In our work, we aim to develop a cross-language game by leveraging subtlety and fun in body languages. Even when players do not share a common language, they can still connect with each other through cooperative gameplay.
 
-In 2011, Ways\cite{Ways} proposed a similar gameplay, one of which involves two players pointing direction for each other in turn.
-However, they applied keyboards and mouses as input devices, which unconciously evolve the restriction of controlling avatars. 
-In order to apply better user experience and reduce the hardware device limitation, we proposed {\it Mute Robot}, an interactive game collocating Kinect to capture players' body posture and correspond the posture to their game avatars. 
+%In order to apply better user experience and reduce the hardware device limitation, 
+We have designed {\it Mute Robot}, an interactive game using Kinect to capture players' body movement and posture and using them to control their game avatars. 
 %Body languages composed of postures allow players to communicate with each other without speech.
 Mute Robot is a cooperative platformer game with two players connected over the Internet.
-By corresponding players' motions to avatars in the game, Mute Robot attempts to create an innovative gameplay of letting players communicate with each other only using body language.
+By mapping players' motions to avatars in the game, Mute Robot attempts to create an innovative gameplay by letting players communicate with each other only using body language.
 %Without any other ways of communication
-With only body language, players need to operate on the same wavelength and build their own conversation pattern with body language during the game.
+With only body language, players will build their own conversation pattern with body language during the game. 
 %at the beginning.
 %After finishing building their own connection between each other, players start to solve a serial of puzzles with their own communication patterns.
 %For example, in the first level, there is a door locked on the right side, players have to tread three buttons on the ground with the correct sequence to unlock the door.(fig. 2)
@@ -152,8 +154,9 @@ With only body language, players need to operate on the same wavelength and buil
 %For example, in the second stage, there are a circle and a x on the first wheel and then three numbers on the second one. It increases the difficulty on the communication between the two players.(fig. 1)
 %Thus, players need to evaluate their own connection modus stronger and stronger to deal with the increasing difficulty in the game. 
 
-Mute Robot shows a novel integration between current cooperative gameplay and body language. Our user study results also indicate that body language based cooperative gameplay is practical and entertaining. 
-Mute Robot provides a path towards future exploration of this relatively unexplored field of game design with capacious development space.
+Mute Robot shows a novel integration between current cooperative gameplay and body language. Our 16-person user study results indicate that body language based cooperative gameplay is practical and entertaining. 
+Compared to previous game designs that used keyboards and mouses as input devices to move the avatars (e.g. Way\cite{Way}), Mute Robot makes use of body language which is significantly more expressive and captures the nuances in communication. 
+We hope Mute Robot inspires future exploration of this relatively unexplored area of game design.  
 %Mute Robot shows a new integration between current cooperative gameplay and body language. After our user study, the results also indicate that body language based manner is utility to increase the entertainment and cooperation between players. In addtion, it constructs a new innovative gameplay style from time immemorial. Mute Robot provides a path towards future exploration of this relatively unexplored field of game design with capacious development space.
 
  
@@ -161,19 +164,20 @@ Mute Robot provides a path towards future exploration of this relatively unexplo
 % =============================================================================
 \section{Design and Development}
 % =============================================================================
-Mute Robot is a cooperative puzzle platformer game using Unity3D\cite{Unity3D} engine. 
-The game involves two players connected over the Internet. During the game play, two players are physically separated in different rooms. 
-They cannot talk to each other directly and the only way to communicate is using their body language. 
-In each room, we provide a wii\cite{Wii} controller and a Kinect device. 
-The wii controller is used to control the avator movement, like jumps and moves. 
-In the mean time, Kinect is applying the player's body language to the player's own avatar. 
+Mute Robot is a cooperative puzzle platformer game built using Unity3D\cite{Unity3D} engine. 
+The game involves two players at two distinct locations connected over the Internet. 
+%During the game play, two players who are physically separated in different locations connect and cooperate to solve the puzzles in the game. 
+The players cannot talk to each other directly and the only way to communicate is using their body language. 
+Each player uses a Wii\cite{Wii} controller to move the avatar (e.g. left, right, jump) and a Kinect to capture their body language. 
+%The wii controller is used to control the avator movement, like jumps and moves. 
+%In the mean time, Kinect is applying the player's body language to the player's own avatar. 
 
 %why use wii, why not use pure Kinect control!?
 
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{figures/Figure1.jpg}
-  \caption{The asymmetric puzzle system from Mute Robot.}
+  \caption{The asymmetric puzzle game design in one of Mute Robot's stages.}
   \label{fig:Figure1}
 \end{figure}
 
@@ -183,11 +187,11 @@ In the mean time, Kinect is applying the player's body language to the player's 
 %關卡設計方式
 %In order to apply a new communication interface for user, Mute Robot is designed by using body language to communicate between players. Testing shows that using body language is an intuitive choice for player to communicate without speech ability.
 
-To encourage players to use body language, we design an asymmetric puzzle system. Only one player can receive puzzle hints, and the other player can solve the puzzle afterwards.
-Taking one of our game stage for example(fig. 1), there is a locked door on the right side which obstructs both players' route to the next stage. 
+To encourage players to use body language, we have designed an asymmetric puzzle system, with only one player receiving puzzle hints. The player will use body language to guide the other player to solve the puzzle.
+Taking one of our game stage as an example (Figure 1), there is a locked door on the right side which obstructs both players' route to the next stage. 
 %With a view to opening the locked door, the underside player will receive some puzzle-solving message. 
-The upper side player can't see the puzzle-solving hints but can turn the wheel to the match the puzzle answer, which consequently opens the locked door.
-The only way to pass the stage is that the underside player needs to convey the puzzle-solving message to the other player with body language. 
+The top player can't see the puzzle-solving hints but can turn the wheel to the match the puzzle answer, which consequently opens the locked door.
+The only way to pass the stage is for the bottom player to convey the puzzle-solving messages to the other player with body language. 
 %As a result, the right side locked door will be opened when all wheels are turned to the correct direction.
 
 %If human beings lose speech ability, with no doubt, an intuition way for people communication is using body language. Based on past historical experience, using body language is a human instinct. In addition,  We assume that 
@@ -196,17 +200,17 @@ The only way to pass the stage is that the underside player needs to convey the 
 \section{Testing and Evaluation}
 % =============================================================================
 
-We recruited 16 participants, and randomly divided them into 8 groups. In each group, participants did not know each other. We captured the players' movement through camera and the gameplay was also screen-recorded by Fraps\cite{Fraps}.
+We recruited 16 participants, and randomly divided them into 8 groups. In each group, participants did not know each other. We captured the players' movement through a video camera and the gameplay was also screen-recorded by Fraps\cite{Fraps}.
 On average, the total game duration was about 10 to 20 minutes. 
 At the end of the game, we provided a five-point Likert scale questionnaire to 
-collect players' feedback for any possible improvement to gameplay experience.
+collect players' feedback to improve the gameplay experience.
 %investigate the gameplay experience and collect player feedback.
 
 \marginpar{
 \begin{figure}
   \centering
   \includegraphics[width=0.8\linewidth]{figures/Figure3.jpg}
-  \caption{A player performs pictogram (letter ``N'') with body language.}
+  \caption{A participant performing pictogram (letter ``N'') with body language.}
   \label{fig:Figure3}
 \end{figure}
 }
@@ -214,22 +218,25 @@ collect players' feedback for any possible improvement to gameplay experience.
 \begin{figure}
   \centering
   \includegraphics[width=0.8\linewidth]{figures/Figure2.jpg}
-  \caption{A puzzle from Mute Robot. The upper side player knows the puzzle-solving sequence and passes the hint to the underside player.}
+  \caption{A sequence puzzle from Mute Robot. The top player knows the correct sequence and is showing the bottom player to step on the center yellow button among the three buttons.}
   \label{fig:Figure2}
 \end{figure}
 
 \subsection{Communication Patterns}
 
- Our recorded video reveals some specific patterns of how the players would communicate. We categorized these patterns into the following 3 types:
+ Our recorded video reveals some patterns on how the players communicate. We summarize these patterns below:
 %According to the recorded video, we found some unique strategies between players' body language communication: 
-(1) {\bf Repeat after me}: player who received puzzle-solving hints would do the puzzle-solving actions one time for the other player to observe and emulate. For example, in one of our game stage, the locked door would not open before the 3 buttons on the floor were trod on one after another with a specific order(fig. 3). The upper side player might perform the answer all at once for the underside player to repeat.
-(2) {\bf Command style}: player who received puzzle-solving hints would command the other player to do some action directly. The next command would not be given until the previous command was executed correctly. For instance, the player would wave her hand to tell the other player to go back; or the player jumped in place several times in order to imply that the other player should tread on the relative position.
-(3) {\bf Pictogram style}: player would use his own body to express what he saw from puzzle-solving hints. As in figure 2, one participant wanted to express the letter ``N'' to the other player. Her solution was using her body to perform pictogram to show the character.
+
+(1) {\bf Repeat after me}: player who received puzzle-solving hints would perform all the puzzle-solving actions in one go for the other player to observe and emulate. For example, in one of our game stages (Figure. 3), the 3 buttons on the floor had to be stepped on one after another in a specific order. The top player would perform the answer all at once for the underside player to repeat.
+
+(2) {\bf Step-by-Step}: player who received puzzle-solving hints would command the other player to do one action at a time. The next command would not be given until the previous command was executed correctly. For instance, a player jumped in place several times in order to imply that the other player should stand on the object at the corresponding position.
+
+(3) {\bf Pictogram}: players would use their own body to express and mimic the hints. As shown in Figure 2, one participant wanted to express the letter ``N'' to the other player. Her solution was using her body to perform pictogram to show the character.
 
 %AAAA
-We observed that the {\emph command style} is most used across player groups and game stages. 
-However, when faced with the floor buttons stage mentioned above, players would spontaneously adopt the {\emph repeat after me} style because the answer to the stage is a continuous series of actions.
-In spite of large diversity of body language communication, the players can still find their way to communicate effectively.
+We observed that the {\emph Step-by-step style} is most used across player groups and game stages. 
+%However, when faced with the floor buttons stage mentioned above, players would spontaneously adopt the {\emph repeat after me} style because the answer to the stage is a continuous series of actions.
+In spite of large diversity of body language communication, the players can still find ways to communicate effectively.
 %Command style最多
 %但也會跟關卡有所關係, ex: 踩踏的關卡有repeat after me 明顯表現，但轉轉輪救沒有
 
@@ -237,15 +244,15 @@ In spite of large diversity of body language communication, the players can stil
 %
 \subsection{Results from Questionnaires}
 
-The results from the questionnaires could support our Mute Robot game design. 
-Figure 4 shows that all participants thought it is interesting to use body language to communicate in puzzle games.
+The results from the questionnaires show that our Mute Robot game design is practical and interesting. 
+Figure 4 shows that all participants thought it was interesting to use body language to communicate.
 %有趣，了解對方的語言、有好感
-Figure 5 shows that about two-thirds of the players reported they could understand the other player's body language.
+Figure 5 shows that about two-thirds of the players reported they could understand the other player's body language well.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.65\linewidth]{figures/1_BLisInteresting.png}
-  \caption{Interesting level of using body language.}
+  \caption{Participant rating of "Using body language is interesting".}
   \label{fig:1_BLisInteresting}
 \end{figure}
 
@@ -253,7 +260,7 @@ Figure 5 shows that about two-thirds of the players reported they could understa
 \begin{figure}
   \centering
   \includegraphics[width=0.65\linewidth]{figures/2_BLunderstand.png}
-  \caption{Understanding level of the teammate's body language.}
+  \caption{Participant rating of "Understood the partner's body language well".}
   \label{fig:2_BLunderstand}
 \end{figure}
 
@@ -281,7 +288,9 @@ Figure 5 shows that about two-thirds of the players reported they could understa
 \section{Future Work}
 % =============================================================================
 
-Currently, our system only tracks significant body movement, which leaves behind important contexts in facial expression and finger movements. As far as we are concerned, with these detailed information, we can communicate with body language more precisely. For example, in the face of number expression, players can intuitively use their fingers to show the number. On the other hand, facial details can express players' emotion directly that help a player know her teammate's feelings and connect two players more deeply.
+Currently, our system using Kinect (v1) only tracks significant body movement, which leaves behind important cues in facial expression and finger movement. 
+%As far as we are concerned, with these detailed information, we can communicate with body language more precisely. 
+For example, players can express their emotion through facial expression such as frowning and smiles, which may help players sense their teammate's feelings and connect them more deeply. On the other hand, players may use their fingers to express numbers and letters too easily, making their body language less entertaining. 
 %加例子！
 %有手指跟表情，溝通更容易&直觀
 
@@ -293,8 +302,8 @@ only one-way message passing is required to pass all the stages.
 %players cooperate with each other. In other words, it only requires one-way message passing.
 %one way
 %若有雙向溝通感情會更好，因兩人的參與度可以提升 or 成就感可以便高(都有做到事情....)
-In the future, we will design additional stages that supports two-way message passing between players, like letting both players receive part of puzzle-solving hints and exchange messages with body language.
-We believe that it will promote more interaction between players and make the stages more challenges.
+We plan to explore stages that supports two-way message passing between players, like letting both players receive part of puzzle-solving hints and exchange messages with body language.
+We believe that it will promote even more interaction between players and make the stages more challenging.
 
 %1. 可以抓到表情、手指
 %2. 可以做更複雜的關卡
@@ -304,15 +313,18 @@ We believe that it will promote more interaction between players and make the st
 % =============================================================================
 \section{Conclusion}
 % =============================================================================
-Mute Robot shows a new integration between current cooperative gameplay and body language.
+We have designed Mute Robot to transcend language barriers and connect people via cooperative gameplay and communication through body language.
 %加合作
 %The Kinect-based 
-Our design can facilitate the body language interaction and intrinsically motivate the player.
-The interaction between game and human body movement form an unprecedented innovative gameplay empiriment.
+% users to be more expressive than 
+%Our design can facilitate the body language interaction and intrinsically motivate the player.
+%The interaction between game and human body movement form an unprecedented innovative gameplay experiment.
 %Mute Robot can proliferate cooperation and interaction between players.
-Our user study results also indicate that body language based cooperative gameplay is practical and entertaining.
+Our user study results indicate that body language-based cooperative gameplay is practical and entertaining.
+We hope to inspire more exploration of using body language in game designs.
+
 %加一句真正可以做什麼
-Mute Robot provides a path towards future exploration of this relatively unexplored field of game design with capacious development space.
+%Mute Robot provides a path towards future exploration of this relatively unexplored field of game design with capacious development space.
 
 %數據 feadback 喜歡 
 %這樣的作法、遊戲是蠻有發展空間的
@@ -320,8 +332,8 @@ Mute Robot provides a path towards future exploration of this relatively unexplo
 
 
 \section{Acknowledgements}
-We thank advisor Mike Y. Chen and the faculty and staff of National Taiwan University.
-We would also like to express our gratitude towards all playtesters who have helped us in our many iterations. 
+We thank our advisor Prof. Mike Y. Chen and the faculty and staff of National Taiwan University.
+We would also like to express our gratitude towards all players and testers who have helped us in our many (buggy) iterations. 
 
 
 %\section{References format}
